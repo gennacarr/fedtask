@@ -1,0 +1,182 @@
+@import '../globalCss/_fonts';
+@import '../globalCss/_variables';
+@import '../globalCss/_mixins';
+
+.login {
+    color:#fff;
+    @extend %fullWidthFluid;
+    text-align: right;
+    font-family: $primaryFont;
+    font-size:16px;
+    span {
+        padding-top:15px;
+        display: inline-block;
+    }
+    .changeUser {
+        color:#fff;
+    }
+    .loginRegister {
+        color:$mainFontColor;
+        background-color:#fff;
+        display:block;
+        float: right;
+        padding: 15px 10px;
+        margin-left:10px;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.navigation {
+    @extend %fullWidthFluid;
+    padding:7% 2% 0;
+    box-sizing:border-box;
+    font-family: $primaryFont;
+    .spacer {
+        width:15%;
+    }
+    li {
+        text-transform: uppercase;
+        display:table-cell;
+        a {
+            display: block;
+            text-decoration: none;
+            white-space: nowrap;
+	        text-decoration:none;
+            color:#fff;
+        }
+    }
+}
+
+#homepage {
+    width:$fullWidth;
+    .mainBanner {   
+        @extend %fullWidthFluid;
+        display: block;
+        img { 
+            display: block;
+        }
+    }
+    .quote {
+        margin:12px auto 26px;
+        text-align:center;
+        font-family: "Times New Roman";
+        color: $mainFontColor;
+        font-size: 24px;
+        font-style: italic;   
+        .quoteMark {
+            font-family: Georgia;
+            color:$secondaryFontColor;
+            font-size: 40px;
+            font-style: italic;
+        }
+        .dottedLineLeft, .dottedLineRight {
+            border-bottom:1px dotted $secondaryFontColor;
+            display: block;
+            width: 124px;
+            height: 10px;
+            display:inline-block;
+        }
+        .dottedLineLeft {
+            margin-right:30px;
+        }
+        .dottedLineRight {
+            margin-left:30px;
+        }
+    }
+    .secondaryContent {
+        @extend %fullWidthFluid;
+    }
+    .contentContainer {
+        width:32%;
+        float:left;
+        padding-bottom: 26px;
+        &.middle {
+            margin:0 2%;
+        }
+        img {
+            width:100%;
+            float:left;
+        }
+        a {
+            text-decoration: none;
+            display:block;
+            width:$fullWidth;
+            height:100%;
+        }
+        h2, p {
+            color: $mainFontColor;
+            text-align: center;
+            width: $fullWidth;
+        }
+        h2 {
+            font-family: $primaryFont;
+            text-transform: uppercase;
+            font-size: 24px;
+            border-bottom:dotted 1px $mainFontColor;  
+            line-height: 55px;
+            letter-spacing: -1px;
+        }
+        p {
+            font-family: $bodyFont;
+            font-size: 11px;
+            margin-top: 16px;
+            line-height: 13px;
+        }
+        .findOutMore {
+            font-size:13px;
+            font-weight:700;
+            &:hover {
+                text-decoration:underline;
+            }
+            &:after {
+                content: ' >';
+                font-size:11px;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width:1150px) {
+    #homepage .quote .dottedLineLeft, #homepage .quote .dottedLineRight {
+        display: none;
+    }
+}
+@media all and (max-width:840px) {
+    #homepage .quote {
+        font-size:18px;
+    }
+}
+@media all and (max-width:645px) {
+    #homepage .quote {
+        font-size:14px;
+    }
+}
+@media all and (max-width:500px) {
+    #homepage {
+        .quote {
+            display: none;
+        }
+        .secondaryContent {
+            margin-top:10px;
+            h2 {
+                font-size:16px;
+            }
+        }
+    }
+    footer .sectionContainer .title {
+        font-size:16px;
+    }
+}
+@media all and (max-width:360px) {
+    #homepage {
+        .contentContainer {
+            width:100%;;
+        }
+    }
+    footer .sectionContainer .title {
+        height:32px;
+    }
+}
